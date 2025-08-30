@@ -21,12 +21,14 @@ This repository is a **5-day learning journey in Go** culminating in a **backend
 ```mermaid
 flowchart TD
     User[User Input] --> Backend[Go Backend Server]
-    Backend --> MCP[MCP Server (A2A Protocol)]
+    Backend --> MCP["MCP Server (A2A Protocol)"]
     MCP --> AgentA[Agent A: Classifier]
     MCP --> AgentB[Agent B: Entity Extractor]
     Backend --> Stream[Streaming Engine]
     Stream --> VectorDB[(Qdrant Vector DB)]
-    Backend --> LLM[LLM (OpenAI GPT-4o / Claude / Ollama)]
+    Backend --> LLM["LLM: OpenAI GPT-4o / Claude / Ollama"]
     VectorDB --> LLM
     LLM --> Backend
     Backend --> User
+
+
